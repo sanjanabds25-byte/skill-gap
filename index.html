@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillBridge | Skill Gap & Employment Survey</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <span>Skill</span>Bridge
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#assessment">Assessment</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#jobs">Employment</a>
+        <a href="#dashboard">Dashboard</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">SKILL GAP & EMPLOYMENT SURVEY</p>
+
+        <h1>
+            Bridge the Gap Between
+            <span>Skills & Employment</span>
+        </h1>
+
+        <p>
+            Identify your current skills, discover your skill gaps,
+            get personalized training recommendations and explore
+            suitable employment opportunities.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#assessment" class="btn primary">Take Skill Assessment</a>
+            <a href="#solutions" class="btn secondary">Explore Solution</a>
+        </div>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="circle-icon">🎯</div>
+
+        <h3>Skill → Training → Employment</h3>
+
+        <p>
+            One platform to identify skill gaps
+            and improve employability.
+        </p>
+
+        <div class="mini-progress">
+            <div></div>
+        </div>
+
+        <small>Build your career step by step</small>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+<section class="stats">
+
+    <div class="stat-card">
+        <span>👨‍💻</span>
+        <h2>500+</h2>
+        <p>Skills Covered</p>
+    </div>
+
+    <div class="stat-card">
+        <span>🎓</span>
+        <h2>100+</h2>
+        <p>Training Areas</p>
+    </div>
+
+    <div class="stat-card">
+        <span>💼</span>
+        <h2>250+</h2>
+        <p>Career Options</p>
+    </div>
+
+    <div class="stat-card">
+        <span>📈</span>
+        <h2>85%</h2>
+        <p>Employability Focus</p>
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section">
+
+    <div class="section-heading">
+        <p>ABOUT THE PROJECT</p>
+        <h2>What is Skill Gap?</h2>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-text">
+
+            <p>
+                A skill gap is the difference between the skills a person
+                currently possesses and the skills required for a particular
+                job or career.
+            </p>
+
+            <p>
+                Our platform helps users identify this gap and provides
+                a pathway for improving their skills and finding suitable
+                employment opportunities.
+            </p>
+
+            <div class="problem-box">
+                <h3>⚠️ Problem</h3>
+
+                <ul>
+                    <li>Mismatch between skills and job requirements</li>
+                    <li>Lack of career awareness</li>
+                    <li>Insufficient technical and soft skills</li>
+                    <li>Difficulty finding suitable opportunities</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="solution-card">
+
+            <div class="solution-number">01</div>
+
+            <h3>Our Approach</h3>
+
+            <div class="flow">
+
+                <div>📝 <span>Assessment</span></div>
+                <b>↓</b>
+
+                <div>🔍 <span>Gap Analysis</span></div>
+                <b>↓</b>
+
+                <div>🎓 <span>Training</span></div>
+                <b>↓</b>
+
+                <div>💼 <span>Employment</span></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ASSESSMENT -->
+<section id="assessment" class="section assessment-section">
+
+    <div class="section-heading">
+        <p>SMART ASSESSMENT</p>
+        <h2>Find Your Skill Gap</h2>
+
+        <span>
+            Complete the assessment to receive a personalized recommendation.
+        </span>
+    </div>
+
+
+    <div class="assessment-container">
+
+        <form id="skillForm">
+
+            <div class="input-group">
+
+                <label>Education Level</label>
+
+                <select id="education" required>
+                    <option value="">Select Education</option>
+                    <option value="school">School</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="graduate">Graduate</option>
+                    <option value="postgraduate">Post Graduate</option>
+                </select>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Employment Status</label>
+
+                <select id="employment" required>
+                    <option value="">Select Status</option>
+                    <option value="student">Student</option>
+                    <option value="employed">Employed</option>
+                    <option value="unemployed">Unemployed</option>
+                    <option value="self">Self Employed</option>
+                </select>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Career Interest</label>
+
+                <select id="career" required>
+
+                    <option value="">Select Career</option>
+
+                    <option value="web">
+                        Web Development
+                    </option>
+
+                    <option value="data">
+                        Data Analytics
+                    </option>
+
+                    <option value="digital">
+                        Digital Marketing
+                    </option>
+
+                    <option value="design">
+                        Graphic Design
+                    </option>
+
+                    <option value="business">
+                        Business / Entrepreneurship
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Your Current Skills</label>
+
+                <div class="skills">
+
+                    <label class="skill-check">
+                        <input type="checkbox" value="html">
+                        HTML / CSS
+                    </label>
+
+                    <label class="skill-check">
+                        <input type="checkbox" value="javascript">
+                        JavaScript
+                    </label>
+
+                    <label class="skill-check">
+                        <input type="checkbox" value="python">
+                        Python
+                    </label>
+
+                    <label class="skill-check">
+                        <input type="checkbox" value="excel">
+                        MS Excel
+                    </label>
+
+                    <label class="skill-check">
+                        <input type="checkbox" value="communication">
+                        Communication
+                    </label>
+
+                    <label class="skill-check">
+                        <input type="checkbox" value="design">
+                        Graphic Design
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <button type="submit" class="btn primary full">
+                Analyze My Skills →
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- RESULT -->
+    <div id="result" class="result-container hidden">
+
+        <div class="result-header">
+            <span>YOUR PERSONALIZED RESULT</span>
+            <h2 id="resultTitle">Skill Analysis</h2>
+        </div>
+
+
+        <div class="result-grid">
+
+            <div class="result-card">
+
+                <h3>📊 Skill Gap Level</h3>
+
+                <div id="gapLevel" class="gap-level">
+                    -
+                </div>
+
+                <p id="gapDescription"></p>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <h3>🎯 Recommended Skills</h3>
+
+                <ul id="recommendedSkills"></ul>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <h3>🎓 Recommended Training</h3>
+
+                <ul id="recommendedTraining"></ul>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <h3>💼 Career Recommendation</h3>
+
+                <h2 id="recommendedCareer"></h2>
+
+                <p id="careerMessage"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOLUTIONS -->
+<section id="solutions" class="section">
+
+    <div class="section-heading">
+
+        <p>OUR SOLUTION</p>
+
+        <h2>How Does Our Website Solve the Problem?</h2>
+
+    </div>
+
+
+    <div class="solution-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🔍</div>
+
+            <h3>1. Identify</h3>
+
+            <p>
+                Identify the user's existing skills,
+                education and career interests.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📊</div>
+
+            <h3>2. Analyze</h3>
+
+            <p>
+                Compare existing skills with
+                career-required skills.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🎓</div>
+
+            <h3>3. Improve</h3>
+
+            <p>
+                Recommend relevant skills,
+                courses and training areas.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">💼</div>
+
+            <h3>4. Connect</h3>
+
+            <p>
+                Suggest employment opportunities
+                based on the user's skills.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="big-flow">
+
+        <div>
+            <strong>Current Skills</strong>
+            <span>What you know</span>
+        </div>
+
+        <span class="arrow">→</span>
+
+        <div>
+            <strong>Skill Gap</strong>
+            <span>What you need</span>
+        </div>
+
+        <span class="arrow">→</span>
+
+        <div>
+            <strong>Training</strong>
+            <span>How to improve</span>
+        </div>
+
+        <span class="arrow">→</span>
+
+        <div>
+            <strong>Employment</strong>
+            <span>Where to apply</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRAINING -->
+<section class="section training-section">
+
+    <div class="section-heading">
+
+        <p>SKILL DEVELOPMENT</p>
+
+        <h2>Recommended Skill Areas</h2>
+
+    </div>
+
+
+    <div class="training-grid">
+
+        <div class="training-card">
+            <span>💻</span>
+            <h3>Technology</h3>
+            <p>Programming, Web Development, Software Tools</p>
+        </div>
+
+        <div class="training-card">
+            <span>📊</span>
+            <h3>Data & Analytics</h3>
+            <p>Excel, SQL, Data Analysis and Visualization</p>
+        </div>
+
+        <div class="training-card">
+            <span>🗣️</span>
+            <h3>Soft Skills</h3>
+            <p>Communication, Teamwork and Leadership</p>
+        </div>
+
+        <div class="training-card">
+            <span>🎨</span>
+            <h3>Creative Skills</h3>
+            <p>Graphic Design, UI/UX and Content Creation</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- JOBS -->
+<section id="jobs" class="section">
+
+    <div class="section-heading">
+
+        <p>EMPLOYMENT</p>
+
+        <h2>Explore Career Opportunities</h2>
+
+    </div>
+
+
+    <div class="job-search">
+
+        <input
+            type="text"
+            id="jobSearch"
+            placeholder="Search jobs or skills..."
+            onkeyup="filterJobs()"
+        >
+
+    </div>
+
+
+    <div id="jobList" class="job-grid">
+
+        <div class="job-card" data-search="web developer javascript html css">
+
+            <span class="job-icon">💻</span>
+
+            <h3>Junior Web Developer</h3>
+
+            <p>HTML • CSS • JavaScript</p>
+
+            <span class="job-tag">Technology</span>
+
+            <button onclick="showJob('Junior Web Developer')">
+                View Details
+            </button>
+
+        </div>
+
+
+        <div class="job-card" data-search="data analyst excel sql python">
+
+            <span class="job-icon">📊</span>
+
+            <h3>Data Analyst</h3>
+
+            <p>Excel • SQL • Python</p>
+
+            <span class="job-tag">Data</span>
+
+            <button onclick="showJob('Data Analyst')">
+                View Details
+            </button>
+
+        </div>
+
+
+        <div class="job-card" data-search="digital marketing seo social media">
+
+            <span class="job-icon">📱</span>
+
+            <h3>Digital Marketing Executive</h3>
+
+            <p>SEO • Social Media • Content</p>
+
+            <span class="job-tag">Marketing</span>
+
+            <button onclick="showJob('Digital Marketing Executive')">
+                View Details
+            </button>
+
+        </div>
+
+
+        <div class="job-card" data-search="graphic designer design photoshop">
+
+            <span class="job-icon">🎨</span>
+
+            <h3>Graphic Designer</h3>
+
+            <p>Design • Creativity • UI</p>
+
+            <span class="job-tag">Creative</span>
+
+            <button onclick="showJob('Graphic Designer')">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="section dashboard-section">
+
+    <div class="section-heading">
+
+        <p>SURVEY ANALYTICS</p>
+
+        <h2>Skill & Employment Dashboard</h2>
+
+    </div>
+
+
+    <div class="dashboard-grid">
+
+        <div class="chart-card">
+
+            <h3>Most Demanded Skills</h3>
+
+            <canvas id="skillsChart"></canvas>
+
+        </div>
+
+
+        <div class="chart-card">
+
+            <h3>Employment Status</h3>
+
+            <canvas id="employmentChart"></canvas>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+<section class="cta">
+
+    <div>
+
+        <h2>Build Skills. Bridge the Gap. Get Employed.</h2>
+
+        <p>
+            Identify your skill gap today and take the next step
+            toward a better career.
+        </p>
+
+    </div>
+
+    <a href="#assessment" class="btn white">
+        Start Assessment
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-logo">
+        <span>Skill</span>Bridge
+    </div>
+
+    <p>
+        Skill Gap & Employment Survey
+    </p>
+
+    <p class="copyright">
+        © 2026 SkillBridge. Academic Project.
+    </p>
+
+</footer>
+
+
+<!-- MODAL -->
+<div id="jobModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+        <h3>Required Skills</h3>
+
+        <ul id="modalSkills"></ul>
+
+        <button class="btn primary" onclick="closeModal()">
+            Close
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
